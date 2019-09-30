@@ -1,0 +1,13 @@
+<h2>Publications</h2>
+<%= link_to "New publication", new_admin_publication_path, class: "btn btn-outline-primary my-2 my-sm-0" %>
+<% @publications.each do |pub| %>
+	<div class="card">
+	  <div class="card-body">
+	  <h5 class="card-title"><%= pub.title %></h5>
+	  <h6 class="card-subtitle mb-2 text-muted"><footer class="blockquote-footer"><cite title="Source Title"><%= pub.file_url %></cite></footer></h6>
+	  <p class="card-text"><%= pub.description %></p>
+	  <%= link_to "View more details", admin_publication_path(pub), class: "card-link"%>
+		<%= link_to "Edit", edit_admin_publication_path(pub), class: "card-link"%>
+	  </div>
+	</div>
+<% end %>

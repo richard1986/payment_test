@@ -1,0 +1,14 @@
+<div class="container">
+	<h2>Publications</h2>
+	<% @publications.each do |pub| %>
+	<div class="card">
+	  <div class="card-body">
+	    <h5 class="card-title"><%= pub.title %></h5>
+	    <h6 class="card-subtitle mb-2 text-muted"><footer class="blockquote-footer"><cite title="Source Title"><%= pub.file_url %></cite></footer></h6>
+	    <p class="card-text"><%= pub.description %></p>
+	    <%= link_to "View more details", publication_path(pub), class: "card-link"%>
+	    <!-- <a href="#" class="card-link">Another link</a> -->
+	  </div>
+	</div>
+	<% end %>	
+</div>

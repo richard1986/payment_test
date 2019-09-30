@@ -1,0 +1,12 @@
+<div class="card">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= @publication.title %></h5>
+    <p class="card-text"><%= @publication.description %></p>
+    <footer class="blockquote-footer"><cite title="Source Title"><%= @publication.file_url %></cite></footer>
+  </div>
+  
+  <div class="card-body">
+    <%= link_to "Go back", publications_path, class: "card-link"%>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+ <div class="container">
+ 	<footer class="blockquote-footer"><%= current_user.email %><cite title="Source Title">
+		<% if @subscription.active %>
+			<footer class="blockquote-footer"><cite title="Source Title">Subscribe</cite></footer>
+			<%= link_to "Cancel subscription", users_cancel_subscription_path %>
+		<% else %>
+			<footer class="blockquote-footer"><cite title="Source Title">Unsubscribed</cite></footer>
+			<%= render 'form' %>
+		<% end %>
+	</cite></footer>
+ </div>
+	
+
+
+
+
+
